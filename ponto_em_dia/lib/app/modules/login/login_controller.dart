@@ -6,19 +6,18 @@ part 'login_controller.g.dart';
 class LoginController = _LoginBase with _$LoginController;
 
 abstract class _LoginBase with Store {
-  @observable
-  TextEditingController nomeController;
-  @observable
-  TextEditingController passwdController;
+  TextEditingController nomeController = TextEditingController();
+  TextEditingController passwdController = TextEditingController();
 
-  @action
-  autenticacao(){
-
-    limparControles();
+  autenticacao() {
+    if (!(this.nomeController.value == null ||
+        this.passwdController.value == null)) {
+      limparControles();
+    }
   }
 
-  limparControles(){
-    this.nomeController.text='';
-    this.passwdController.text='';
+  limparControles() {
+    this.nomeController.text = '';
+    this.passwdController.text = '';
   }
 }

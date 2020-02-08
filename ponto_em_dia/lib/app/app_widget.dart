@@ -8,7 +8,8 @@ class AppWidget extends StatelessWidget {
       navigatorKey: Modular.navigatorKey,
       title: 'Ponto Em Dia',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.black,
+        cursorColor: Colors.black
       ),
       initialRoute: 'login',
       onGenerateRoute: Modular.generateRoute,

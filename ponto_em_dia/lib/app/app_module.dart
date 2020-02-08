@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../app/app_widget.dart';
 import '../app/modules/home/home_module.dart';
 
+import 'modules/cadastro/cadastro_module.dart';
 import 'modules/login/login_module.dart';
 
 class AppModule extends MainModule {
@@ -17,6 +18,7 @@ class AppModule extends MainModule {
   List<Router> get routers => [
         Router('/', module: HomeModule()),
         Router('/login', module: LoginModule()),
+        Router('/cadastro', module: CadastroModule()),
       ];
 
   @override

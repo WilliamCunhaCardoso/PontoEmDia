@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gradient_widgets/gradient_widgets.dart';
-import 'package:ponto_em_dia/app/modules/login/widgets/custom_button.dart';
-import 'package:ponto_em_dia/app/modules/login/widgets/custom_textformfield.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import '../login/login_controller.dart'; 
+import '../widgets/custom_button.dart';
+import '../widgets/custom_textformfield.dart';
 
 class LoginPage extends StatefulWidget {
   final String title;
@@ -12,6 +14,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  
+  final loginController = Modular.get<LoginController>(); // * Instância
+  
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -29,25 +34,37 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // todo: botao esqueci senha
                   Column(
                     children: <Widget>[
-                      CustomTxtFrmFld(),
-                      SizedBox(height: 20,),
-                      CustomTxtFrmFld(),
+                      CustomTxtFrmFld(
+                        hintText: 'Username',
+                        textEditingController: loginController.nomeController,
+                        ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      CustomTxtFrmFld(
+                        hintText: 'Senha',
+                        textEditingController: loginController.passwdController,
+                        isPasswd: true,
+                      ),
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       CustomButton(
                         titulo: 'Cadastrar',
-                        isSimple: true, funcao: null,
+                        isSimple: true,
+                        funcao: () => Modular.to.pushReplacementNamed('/cadastro'),
                       ),
                       CustomButton(
-                        titulo: 'Login', funcao: null,
-                      )
+                        titulo: 'Login',
+                        funcao: () => loginController.autenticacao(),
+                      ),
                     ],
                   ),
                 ],
