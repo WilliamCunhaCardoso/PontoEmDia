@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../login/login_controller.dart'; 
+import '../login/login_controller.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_textformfield.dart';
 
@@ -14,9 +14,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  
   final loginController = Modular.get<LoginController>(); // * Instância
-  
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -39,10 +38,8 @@ class _LoginPageState extends State<LoginPage> {
                       CustomTxtFrmFld(
                         hintText: 'Username',
                         textEditingController: loginController.nomeController,
-                        ),
-                      SizedBox(
-                        height: 20,
                       ),
+                      SizedBox(height: 20),
                       CustomTxtFrmFld(
                         hintText: 'Senha',
                         textEditingController: loginController.passwdController,
@@ -50,16 +47,15 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       CustomButton(
                         titulo: 'Cadastrar',
                         isSimple: true,
-                        funcao: () => Modular.to.pushReplacementNamed('/cadastro'),
+                        funcao: () =>
+                            Modular.to.pushReplacementNamed('/cadastro'),
                       ),
                       CustomButton(
                         titulo: 'Login',
