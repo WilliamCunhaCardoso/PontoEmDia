@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ponto_em_dia/app/modules/widgets/custom_bottombar.dart';
 import 'package:ponto_em_dia/app/modules/widgets/custom_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,7 +16,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Drawer(child: Container(),),
         title: Text(widget.title),
       ),
       body: Container(
@@ -58,6 +58,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: CustomBottomBar(),
     );
   }
 }
