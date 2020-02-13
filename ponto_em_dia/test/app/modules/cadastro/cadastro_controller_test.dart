@@ -1,6 +1,5 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 import 'package:ponto_em_dia/app/modules/cadastro/cadastro_controller.dart';
 import 'package:ponto_em_dia/app/modules/cadastro/cadastro_module.dart';
