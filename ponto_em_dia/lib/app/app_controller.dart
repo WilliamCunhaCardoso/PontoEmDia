@@ -19,7 +19,5 @@ abstract class _AppBase with Store {
         break;
       default:
     }
-    print('index'+this.indexPagina.toString());
-    print('valor recebido'+value.toString());
   }
 }
