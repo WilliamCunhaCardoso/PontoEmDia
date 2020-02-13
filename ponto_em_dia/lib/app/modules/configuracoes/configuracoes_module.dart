@@ -10,7 +10,7 @@ class ConfiguracoesModule extends ChildModule {
 
   @override
   List<Router> get routers => [
-        Router('/', child: (_, args) => ConfiguracoesPage()),
+        Router('/configuracoes', child: (_, args) => ConfiguracoesPage()),
       ];
 
   static Inject get to => Inject<ConfiguracoesModule>.of();

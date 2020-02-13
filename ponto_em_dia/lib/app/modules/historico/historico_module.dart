@@ -10,7 +10,7 @@ class HistoricoModule extends ChildModule {
 
   @override
   List<Router> get routers => [
-        Router('/', child: (_, args) => HistoricoPage()),
+        Router('/historico', child: (_, args) => HistoricoPage()),
       ];
 
   static Inject get to => Inject<HistoricoModule>.of();
