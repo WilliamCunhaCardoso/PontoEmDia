@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ponto_em_dia/app/modules/widgets/custom_bottombar.dart';
 
 class ConfiguracoesPage extends StatefulWidget {
   final String title;
@@ -19,6 +20,7 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
       body: Column(
         children: <Widget>[],
       ),
+      bottomNavigationBar: CustomBottomBar(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ponto_em_dia/app/modules/widgets/custom_bottombar.dart';
 
 class HistoricoPage extends StatefulWidget {
   final String title;
@@ -18,6 +19,7 @@ class _HistoricoPageState extends State<HistoricoPage> {
       body: Column(
         children: <Widget>[],
       ),
+      bottomNavigationBar: CustomBottomBar(),
     );
   }
 }
