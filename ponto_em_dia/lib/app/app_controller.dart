@@ -14,8 +14,17 @@ abstract class _AppBase with Store {
     // todo: Mudança de pagina
     this.indexPagina = value;
     switch (value) {
-      case 0 :
+      case 0:
         Modular.to.pushNamed('/');
+        break;
+      case 1:
+        Modular.to.pushNamed('/historico');
+        break;
+      case 2:
+        Modular.to.pushNamed('/perfil');
+        break;
+      case 3:
+        Modular.to.pushNamed('/configuracoes');
         break;
       default:
     }
