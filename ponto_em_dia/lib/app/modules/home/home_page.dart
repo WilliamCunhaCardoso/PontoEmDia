@@ -31,12 +31,12 @@ class _HomePageState extends State<HomePage> {
                 CustomCard(
                   flex: 1,
                   icon: FontAwesomeIcons.doorOpen,
-                  text: 'Entrada',
+                  text: 'Entrada', categoria: 'Entrada',
                 ),
                 CustomCard(
                   flex: 1,
                   icon: FontAwesomeIcons.utensils,
-                  text: 'Almoço',
+                  text: 'Almoço', categoria: 'Almoço',
                 ),
               ],
             ),
@@ -46,12 +46,12 @@ class _HomePageState extends State<HomePage> {
                 CustomCard(
                   icon: FontAwesomeIcons.hourglassEnd,
                   text: 'Retorno',
-                  flex: 1,
+                  flex: 1, categoria: 'Retorno',
                 ),
                 CustomCard(
                   icon: FontAwesomeIcons.doorClosed,
                   text: 'Saída',
-                  flex: 1,
+                  flex: 1, categoria: 'Saída',
                 ),
               ],
             ),

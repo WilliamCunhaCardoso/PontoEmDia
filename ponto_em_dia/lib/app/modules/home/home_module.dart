@@ -6,6 +6,7 @@ class HomeModule extends ChildModule {
   @override
   List<Bind> get binds => [
         Bind((i) => HomeController()),
+        
       ];
 
   @override
