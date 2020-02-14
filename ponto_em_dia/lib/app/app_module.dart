@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 
 import 'app_widget.dart';
+import 'modules/historico/historico_controller.dart';
 import 'modules/home/home_module.dart';
 import 'modules/cadastro/cadastro_module.dart';
 import 'modules/configuracoes/configuracoes_module.dart';
@@ -14,6 +15,7 @@ class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
         Bind((i) => AppController()),
+        Bind((i) => HistoricoController()),
       ];
 
   @override
