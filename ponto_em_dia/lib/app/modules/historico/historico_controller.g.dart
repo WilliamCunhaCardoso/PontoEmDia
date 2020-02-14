@@ -9,31 +9,41 @@ part of 'historico_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HistoricoController on _HistoricoBase, Store {
-  final _$valueAtom = Atom(name: '_HistoricoBase.value');
+  final _$historicoAtom = Atom(name: '_HistoricoBase.historico');
 
   @override
-  int get value {
-    _$valueAtom.context.enforceReadPolicy(_$valueAtom);
-    _$valueAtom.reportObserved();
-    return super.value;
+  ObservableList<HistoricoModel> get historico {
+    _$historicoAtom.context.enforceReadPolicy(_$historicoAtom);
+    _$historicoAtom.reportObserved();
+    return super.historico;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.context.conditionallyRunInAction(() {
-      super.value = value;
-      _$valueAtom.reportChanged();
-    }, _$valueAtom, name: '${_$valueAtom.name}_set');
+  set historico(ObservableList<HistoricoModel> value) {
+    _$historicoAtom.context.conditionallyRunInAction(() {
+      super.historico = value;
+      _$historicoAtom.reportChanged();
+    }, _$historicoAtom, name: '${_$historicoAtom.name}_set');
   }
 
   final _$_HistoricoBaseActionController =
       ActionController(name: '_HistoricoBase');
 
   @override
-  void increment() {
+  void addPonto(String value) {
     final _$actionInfo = _$_HistoricoBaseActionController.startAction();
     try {
-      return super.increment();
+      return super.addPonto(value);
+    } finally {
+      _$_HistoricoBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void removerPonto(HistoricoModel ponto) {
+    final _$actionInfo = _$_HistoricoBaseActionController.startAction();
+    try {
+      return super.removerPonto(ponto);
     } finally {
       _$_HistoricoBaseActionController.endAction(_$actionInfo);
     }
