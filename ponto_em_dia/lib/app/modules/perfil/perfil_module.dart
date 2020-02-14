@@ -10,7 +10,7 @@ class PerfilModule extends ChildModule {
 
   @override
   List<Router> get routers => [
-        Router('/perfil', child: (_, args) => PerfilPage()),
+        Router('/', child: (_, args) => PerfilPage()),
       ];
 
   static Inject get to => Inject<PerfilModule>.of();
