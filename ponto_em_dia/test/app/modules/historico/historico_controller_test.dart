@@ -16,11 +16,5 @@ void main() {
     test("First Test", () {
       expect(historico, isInstanceOf<HistoricoController>());
     });
-
-    test("Set Value", () {
-      expect(historico.value, equals(0));
-      historico.increment();
-      expect(historico.value, equals(1));
-    });
   });
 }
