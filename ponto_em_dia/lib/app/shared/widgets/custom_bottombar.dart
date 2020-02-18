@@ -5,7 +5,9 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:ponto_em_dia/app/app_controller.dart';
 
 class CustomBottomBar extends StatelessWidget {
+  // * Instanciando Controller
   final appController = Modular.get<AppController>();
+
   @override
   Widget build(BuildContext context) {
     return Observer(
@@ -19,28 +21,28 @@ class CustomBottomBar extends StatelessWidget {
         items: <BubbleBottomBarItem>[
           // * Home
           BubbleBottomBarItem(
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.black,
             icon: Icon(Icons.dashboard, color: Colors.black),
-            activeIcon: Icon(Icons.dashboard, color: Colors.red),
+            activeIcon: Icon(Icons.dashboard, color: Colors.black),
             title: Text("Home"),
           ),
           // * Histórico
           BubbleBottomBarItem(
-              backgroundColor: Colors.deepPurple,
+              backgroundColor: Colors.black,
               icon: Icon(Icons.access_time, color: Colors.black),
-              activeIcon: Icon(Icons.access_time, color: Colors.deepPurple),
+              activeIcon: Icon(Icons.access_time, color: Colors.black),
               title: Text("Logs")),
           // * Perfil
           BubbleBottomBarItem(
-              backgroundColor: Colors.indigo,
+              backgroundColor: Colors.black,
               icon: Icon(Icons.folder_open, color: Colors.black),
-              activeIcon: Icon(Icons.folder_open, color: Colors.indigo),
+              activeIcon: Icon(Icons.folder_open, color: Colors.black),
               title: Text("Folders")),
           // * Configurações
           BubbleBottomBarItem(
-              backgroundColor: Colors.green,
+              backgroundColor: Colors.black,
               icon: Icon(Icons.settings, color: Colors.black),
-              activeIcon: Icon(Icons.settings, color: Colors.green),
+              activeIcon: Icon(Icons.settings, color: Colors.black),
               title: Text("Menu"))
         ],
       ),
