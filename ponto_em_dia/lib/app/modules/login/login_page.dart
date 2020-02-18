@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import 'package:ponto_em_dia/app/shared/widgets/custom_button.dart';
+import 'package:ponto_em_dia/app/shared/widgets/custom_textformfield.dart';
+
 import '../login/login_controller.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_textformfield.dart';
 
 class LoginPage extends StatefulWidget {
   final String title;

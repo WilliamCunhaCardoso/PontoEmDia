@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ponto_em_dia/app/modules/widgets/custom_button.dart';
-import 'package:ponto_em_dia/app/modules/widgets/custom_textformfield.dart';
+import 'package:ponto_em_dia/app/shared/widgets/custom_button.dart';
+import 'package:ponto_em_dia/app/shared/widgets/custom_textformfield.dart';
 
 class CadastroPage extends StatefulWidget {
   final String title;

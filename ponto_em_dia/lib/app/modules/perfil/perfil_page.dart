@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ponto_em_dia/app/modules/widgets/custom_bottombar.dart';
+import 'package:ponto_em_dia/app/shared/widgets/custom_bottombar.dart';
 
 class PerfilPage extends StatefulWidget {
   final String title;
