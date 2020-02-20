@@ -1,5 +1,6 @@
 import 'package:mobx/mobx.dart';
 import 'package:ponto_em_dia/app/modules/historico/historico_model.dart';
+import 'package:ponto_em_dia/app/shared/functions/showToast.dart';
 
 part 'historico_controller.g.dart';
 
@@ -11,10 +12,12 @@ abstract class _HistoricoBase with Store {
 
   @action
   void addPonto(String value) {
-    HistoricoModel ponto = HistoricoModel(categoria: value, horario: DateTime.now());
+    HistoricoModel ponto = HistoricoModel(
+      categoria: value,
+      horario: DateTime.now(),
+    );
     historico.add(ponto);
-    print('ponto batido: '+value);
-    print(historico.length);
+    toast('Ponto $value batido!', 2);
   }
 
   @action
