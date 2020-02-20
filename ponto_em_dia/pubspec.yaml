@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  oktoast: ^2.3.1+1
   gradient_widgets: ^0.5.2
   dio: ^3.0.8
   flutter_mobx: ^1.0.1
