@@ -35,9 +35,9 @@ class CustomBottomBar extends StatelessWidget {
           // * Perfil
           BubbleBottomBarItem(
               backgroundColor: Colors.black,
-              icon: Icon(Icons.folder_open, color: Colors.black),
-              activeIcon: Icon(Icons.folder_open, color: Colors.black),
-              title: Text("Folders")),
+              icon: Icon(Icons.person, color: Colors.black),
+              activeIcon: Icon(Icons.person, color: Colors.black),
+              title: Text("Perfil")),
           // * Configurações
           BubbleBottomBarItem(
               backgroundColor: Colors.black,
