@@ -32,10 +32,7 @@ class _CustomCardState extends State<CustomCard> {
         child: Container(
           height: 100,
           child: GestureDetector(
-            onTap: () {
-              controller.addPonto(this.widget.categoria);
-              print(this.widget.categoria);
-            },
+            onTap: () => controller.addPonto(this.widget.categoria),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -44,7 +41,7 @@ class _CustomCardState extends State<CustomCard> {
                 Text(
                   this.widget.text,
                   textAlign: TextAlign.center,
-                  style: TextStyle(),
+                  style: TextStyle(), // todo: verificar remoção
                 ),
               ],
             ),
