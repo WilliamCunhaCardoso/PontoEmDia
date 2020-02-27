@@ -26,6 +26,7 @@ class _HistoricoPageState extends State<HistoricoPage> {
             itemCount: controllerHistorico.historico.length,
             itemBuilder: (context, index) {
               return ListTile(
+                leading: Icon(controllerHistorico.historico[index].icone),
                 title: Text(
                   controllerHistorico.historico[index].categoria,
                 ),

@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:mobx/mobx.dart';
 import 'package:ponto_em_dia/app/modules/historico/historico_model.dart';
 import 'package:ponto_em_dia/app/shared/functions/showToast.dart';
@@ -11,10 +12,11 @@ abstract class _HistoricoBase with Store {
   ObservableList<HistoricoModel> historico = ObservableList();
 
   @action
-  void addPonto(String value) {
+  void addPonto(String value, IconData iconValue) {
     HistoricoModel ponto = HistoricoModel(
       categoria: value,
       horario: DateTime.now(),
+      icone: iconValue,
     );
     historico.add(ponto);
     toast('Ponto $value batido!', 2);

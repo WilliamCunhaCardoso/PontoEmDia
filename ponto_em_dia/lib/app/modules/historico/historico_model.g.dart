@@ -43,6 +43,23 @@ mixin _$HistoricoModel on _HistoricoModel, Store {
     }, _$categoriaAtom, name: '${_$categoriaAtom.name}_set');
   }
 
+  final _$iconeAtom = Atom(name: '_HistoricoModel.icone');
+
+  @override
+  IconData get icone {
+    _$iconeAtom.context.enforceReadPolicy(_$iconeAtom);
+    _$iconeAtom.reportObserved();
+    return super.icone;
+  }
+
+  @override
+  set icone(IconData value) {
+    _$iconeAtom.context.conditionallyRunInAction(() {
+      super.icone = value;
+      _$iconeAtom.reportChanged();
+    }, _$iconeAtom, name: '${_$iconeAtom.name}_set');
+  }
+
   final _$_HistoricoModelActionController =
       ActionController(name: '_HistoricoModel');
 
@@ -61,6 +78,16 @@ mixin _$HistoricoModel on _HistoricoModel, Store {
     final _$actionInfo = _$_HistoricoModelActionController.startAction();
     try {
       return super.setCategoria(value);
+    } finally {
+      _$_HistoricoModelActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic setIcone(IconData value) {
+    final _$actionInfo = _$_HistoricoModelActionController.startAction();
+    try {
+      return super.setIcone(value);
     } finally {
       _$_HistoricoModelActionController.endAction(_$actionInfo);
     }

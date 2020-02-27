@@ -30,10 +30,10 @@ mixin _$HistoricoController on _HistoricoBase, Store {
       ActionController(name: '_HistoricoBase');
 
   @override
-  void addPonto(String value) {
+  void addPonto(String value, IconData iconValue) {
     final _$actionInfo = _$_HistoricoBaseActionController.startAction();
     try {
-      return super.addPonto(value);
+      return super.addPonto(value, iconValue);
     } finally {
       _$_HistoricoBaseActionController.endAction(_$actionInfo);
     }
