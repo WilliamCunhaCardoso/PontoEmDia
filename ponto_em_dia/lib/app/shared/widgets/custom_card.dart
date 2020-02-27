@@ -28,11 +28,12 @@ class _CustomCardState extends State<CustomCard> {
   Widget build(BuildContext context) {
     return Expanded(
       flex: this.widget.flex,
-      child: GradientCard(
-        child: Container(
-          height: 100,
-          child: GestureDetector(
-            onTap: () => controller.addPonto(this.widget.categoria),
+      child: GestureDetector(
+        onTap: () => controller.addPonto(this.widget.categoria, this.widget.icon),
+        child: GradientCard(
+          gradient: Gradients.haze,
+          child: Container(
+            height: 100,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,13 +42,11 @@ class _CustomCardState extends State<CustomCard> {
                 Text(
                   this.widget.text,
                   textAlign: TextAlign.center,
-                  style: TextStyle(), // todo: verificar remoção
                 ),
               ],
             ),
           ),
         ),
-        gradient: Gradients.haze,
       ),
     );
   }
