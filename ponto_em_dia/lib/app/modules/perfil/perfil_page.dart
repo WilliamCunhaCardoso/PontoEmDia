@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getflutter/getflutter.dart';
 import 'package:ponto_em_dia/app/shared/widgets/custom_bottombar.dart';
 
 class PerfilPage extends StatefulWidget {
@@ -16,32 +17,35 @@ class _PerfilPageState extends State<PerfilPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Card(
-        child: ListView(
+      body: GFCard(
+        content: Column(
           children: <Widget>[
-            ListTile(
-              title: Text('Nome'),
-              subtitle: Text('William Cunha Cardoso'),
+            GFImageOverlay(
+              height: 100,
+              width: 100,
+              shape: BoxShape.circle,
+              image: NetworkImage(
+                  'https://media-exp1.licdn.com/dms/image/C4E03AQHgDSBFT832lQ/profile-displayphoto-shrink_200_200/0?e=1588204800&v=beta&t=6g3Mbt27TAhyEkxlNwPsPRaK81jjpz2W3rbtlHK123g'),
             ),
-            ListTile(
-              title: Text('E-mail'),
-              subtitle: Text('william@email.com'),
+            GFListTile(
+              titleText: 'Nome',
+              subtitleText: 'William Cunha Cardoso',
             ),
-            ListTile(
-              title: Text('Cargo'),
-              subtitle: Text('Desenvolvedor Mobile Jr'),
+            GFListTile(
+              titleText: 'Cargo',
+              subtitleText: 'Desenvolvedor Mobile Jr',
             ),
-            ListTile(
-              title: Text('Departamento'),
-              subtitle: Text('Desenvolvimento'),
+            GFListTile(
+              titleText: 'Departamento',
+              subtitleText: 'Desenvolvimento',
             ),
-            ListTile(
-              title: Text('Matrícula'),
-              subtitle: Text('DEV001'),
+            GFListTile(
+              titleText: 'Supervisor',
+              subtitleText: 'Mailliw Osodrac',
             ),
-            ListTile(
-              title: Text('Gestor'),
-              subtitle: Text('Mailliw Osodrac'),
+            GFListTile(
+              titleText: 'Matrícula',
+              subtitleText: 'D3V001',
             ),
           ],
         ),
