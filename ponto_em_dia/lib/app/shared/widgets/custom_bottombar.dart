@@ -38,12 +38,6 @@ class CustomBottomBar extends StatelessWidget {
               icon: Icon(Icons.person, color: Colors.black),
               activeIcon: Icon(Icons.person, color: Colors.black),
               title: Text("Perfil")),
-          // * Configurações
-          BubbleBottomBarItem(
-              backgroundColor: Colors.black,
-              icon: Icon(Icons.settings, color: Colors.black),
-              activeIcon: Icon(Icons.settings, color: Colors.black),
-              title: Text("Menu"))
         ],
       ),
     );
