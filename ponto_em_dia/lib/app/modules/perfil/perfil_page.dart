@@ -16,8 +16,35 @@ class _PerfilPageState extends State<PerfilPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: <Widget>[],
+      body: Card(
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              title: Text('Nome'),
+              subtitle: Text('William Cunha Cardoso'),
+            ),
+            ListTile(
+              title: Text('E-mail'),
+              subtitle: Text('william@email.com'),
+            ),
+            ListTile(
+              title: Text('Cargo'),
+              subtitle: Text('Desenvolvedor Mobile Jr'),
+            ),
+            ListTile(
+              title: Text('Departamento'),
+              subtitle: Text('Desenvolvimento'),
+            ),
+            ListTile(
+              title: Text('Matrícula'),
+              subtitle: Text('DEV001'),
+            ),
+            ListTile(
+              title: Text('Gestor'),
+              subtitle: Text('Mailliw Osodrac'),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: CustomBottomBar(),
     );
