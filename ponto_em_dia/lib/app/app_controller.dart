@@ -11,20 +11,19 @@ abstract class _AppBase with Store {
 
   @action
   void mudarPagina(int value) {
-    // todo: Mudança de pagina
     this.indexPagina = value;
     switch (value) {
       case 0:
-        Modular.to.pushNamed('/');
+        Modular.to.pushReplacementNamed('/');
         break;
       case 1:
-        Modular.to.pushNamed('/historico');
+        Modular.to.pushReplacementNamed('/historico');
         break;
       case 2:
-        Modular.to.pushNamed('/perfil');
+        Modular.to.pushReplacementNamed('/perfil');
         break;
       case 3:
-        Modular.to.pushNamed('/configuracoes');
+        Modular.to.pushReplacementNamed('/configuracoes');
         break;
       default:
     }
