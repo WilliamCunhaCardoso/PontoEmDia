@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'app_widget.dart';
 import 'modules/historico/historico_controller.dart';
 import 'modules/home/home_module.dart';
-import 'modules/cadastro/cadastro_module.dart';
-import 'modules/configuracoes/configuracoes_module.dart';
 import 'modules/historico/historico_module.dart';
 import 'modules/login/login_module.dart';
 import 'modules/perfil/perfil_module.dart';
@@ -24,8 +22,6 @@ class AppModule extends MainModule {
         Router('/login', module: LoginModule()),
         Router('/perfil', module: PerfilModule()),
         Router('/historico', module: HistoricoModule()),
-        Router('/configuracoes', module: ConfiguracoesModule()),
-        Router('/cadastro', module: CadastroModule()),
       ];
 
   @override
