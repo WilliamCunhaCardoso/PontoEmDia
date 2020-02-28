@@ -49,20 +49,9 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                   SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      CustomButton(
-                        titulo: 'Cadastrar',
-                        isSimple: true,
-                        funcao: () =>
-                            Modular.to.pushReplacementNamed('/cadastro'),
-                      ),
-                      CustomButton(
-                        titulo: 'Login',
-                        funcao: () => loginController.autenticacao(),
-                      ),
-                    ],
+                  CustomButton(
+                    titulo: 'Login',
+                    funcao: () => loginController.autenticacao(),
                   ),
                 ],
               ),
