@@ -1,4 +1,4 @@
-# ponto_em_dia
+# Ponto Em Dia
 
 Um Mockup produzido com base no Modular + Mobx, com propósito de estudo.
 
