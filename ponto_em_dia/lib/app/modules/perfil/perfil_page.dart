@@ -62,33 +62,30 @@ class _PerfilPageState extends State<PerfilPage> {
               ),
               GFListTile(
                 title: Text(
-                  'Sincronizados',
+                  'Sincronizados: 13',
                   style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w500,
                       color: GFColors.SUCCESS),
                 ),
-                subtitleText: '13',
               ),
               GFListTile(
                 title: Text(
-                  'Sincronizados',
+                  'Aguardando: 4',
                   style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w500,
                       color: GFColors.WARNING),
                 ),
-                subtitleText: '4',
               ),
               GFListTile(
                 title: Text(
-                  'Perdidos',
+                  'Perdidos: 3',
                   style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w500,
                       color: GFColors.DANGER),
                 ),
-                subtitleText: '3',
               ),
             ],
           ),
