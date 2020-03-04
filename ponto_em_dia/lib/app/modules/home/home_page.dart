@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:ponto_em_dia/app/shared/widgets/custom_bottombar.dart';
 import 'package:ponto_em_dia/app/shared/widgets/custom_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -62,7 +61,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomBar(),
     );
   }
 }

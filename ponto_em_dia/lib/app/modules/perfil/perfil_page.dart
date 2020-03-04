@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
-import 'package:ponto_em_dia/app/shared/widgets/custom_bottombar.dart';
 
 class PerfilPage extends StatefulWidget {
   final String title;
@@ -91,7 +90,6 @@ class _PerfilPageState extends State<PerfilPage> {
           ),
         ),
       ),
-      bottomNavigationBar: CustomBottomBar(),
     );
   }
 }

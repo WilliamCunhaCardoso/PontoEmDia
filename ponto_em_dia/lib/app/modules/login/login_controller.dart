@@ -14,7 +14,7 @@ abstract class _LoginBase with Store {
     if (!(this.nomeController.value == null ||
         this.passwdController.value == null)) {
       limparControles();
-      Modular.to.pushReplacementNamed('/');
+      Modular.to.pushReplacementNamed('pageview');
     }
   }
 

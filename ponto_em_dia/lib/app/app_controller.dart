@@ -12,20 +12,20 @@ abstract class _AppBase with Store {
   @action
   void mudarPagina(int value) {
     this.indexPagina = value;
-    switch (value) {
-      case 0:
-        Modular.to.pushReplacementNamed('/');
-        break;
-      case 1:
-        Modular.to.pushReplacementNamed('/historico');
-        break;
-      case 2:
-        Modular.to.pushReplacementNamed('/perfil');
-        break;
-      case 3:
-        Modular.to.pushReplacementNamed('/configuracoes');
-        break;
-      default:
-    }
+    // switch (value) {
+    //   case 0:
+    //     Modular.to.pushReplacementNamed('/');
+    //     break;
+    //   case 1:
+    //     Modular.to.pushReplacementNamed('/historico');
+    //     break;
+    //   case 2:
+    //     Modular.to.pushReplacementNamed('/perfil');
+    //     break;
+    //   case 3:
+    //     Modular.to.pushReplacementNamed('/configuracoes');
+    //     break;
+    //   default:
+    // }
   }
 }
