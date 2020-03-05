@@ -15,11 +15,5 @@ void main() {
     test("First Test", () {
       expect(pageview, isInstanceOf<PageViewController>());
     });
-
-    test("Set Value", () {
-      expect(pageview.value, equals(0));
-      pageview.increment();
-      expect(pageview.value, equals(1));
-    });
   });
 }

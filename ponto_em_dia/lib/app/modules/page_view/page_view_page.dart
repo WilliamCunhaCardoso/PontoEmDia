@@ -4,13 +4,12 @@ import 'package:ponto_em_dia/app/modules/historico/historico_page.dart';
 import 'package:ponto_em_dia/app/modules/home/home_page.dart';
 import 'package:ponto_em_dia/app/modules/perfil/perfil_page.dart';
 
-import '../../app_controller.dart';
 import '../../shared/widgets/custom_bottombar.dart';
+import 'page_view_controller.dart';
 
 class PageViewPage extends StatefulWidget {
   final String title;
   const PageViewPage({Key key, this.title = "PageView"}) : super(key: key);
-  
 
   @override
   _PageViewPageState createState() => _PageViewPageState();
@@ -18,16 +17,14 @@ class PageViewPage extends StatefulWidget {
 
 class _PageViewPageState extends State<PageViewPage> {
   // * Instanciando Controller
-  final appController = Modular.get<AppController>();
+  final pageController = Modular.get<PageViewController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: PageView(
-        onPageChanged: (value) => appController.mudarPagina(value),
+        onPageChanged: (value) => pageController.mudarPagina(value),
         pageSnapping: true,
+        controller: pageController.pageController,
         children: <Widget>[
           HomePage(),
           HistoricoPage(),

@@ -9,31 +9,31 @@ part of 'page_view_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$PageViewController on _PageViewBase, Store {
-  final _$valueAtom = Atom(name: '_PageViewBase.value');
+  final _$indexPaginaAtom = Atom(name: '_PageViewBase.indexPagina');
 
   @override
-  int get value {
-    _$valueAtom.context.enforceReadPolicy(_$valueAtom);
-    _$valueAtom.reportObserved();
-    return super.value;
+  int get indexPagina {
+    _$indexPaginaAtom.context.enforceReadPolicy(_$indexPaginaAtom);
+    _$indexPaginaAtom.reportObserved();
+    return super.indexPagina;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.context.conditionallyRunInAction(() {
-      super.value = value;
-      _$valueAtom.reportChanged();
-    }, _$valueAtom, name: '${_$valueAtom.name}_set');
+  set indexPagina(int value) {
+    _$indexPaginaAtom.context.conditionallyRunInAction(() {
+      super.indexPagina = value;
+      _$indexPaginaAtom.reportChanged();
+    }, _$indexPaginaAtom, name: '${_$indexPaginaAtom.name}_set');
   }
 
   final _$_PageViewBaseActionController =
       ActionController(name: '_PageViewBase');
 
   @override
-  void increment() {
+  void mudarPagina(int value) {
     final _$actionInfo = _$_PageViewBaseActionController.startAction();
     try {
-      return super.increment();
+      return super.mudarPagina(value);
     } finally {
       _$_PageViewBaseActionController.endAction(_$actionInfo);
     }

@@ -7,6 +7,7 @@ import 'modules/historico/historico_controller.dart';
 import 'modules/home/home_module.dart';
 import 'modules/historico/historico_module.dart';
 import 'modules/login/login_module.dart';
+import 'modules/page_view/page_view_controller.dart';
 import 'modules/page_view/page_view_module.dart';
 import 'modules/perfil/perfil_module.dart';
 
@@ -15,6 +16,7 @@ class AppModule extends MainModule {
   List<Bind> get binds => [
         Bind((i) => AppController()),
         Bind((i) => HistoricoController()),
+        Bind((i) => PageViewController()),
       ];
 
   @override
