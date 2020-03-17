@@ -4,7 +4,7 @@ Um Mockup produzido com base no Modular (Modularização dos componentes do app 
 
 ## GIF
 
-- ![Apresentação do App em GIF](gif/PontoEmDia.gif){:height="200px" width="200px"} 
+- ![Apresentação do App em GIF](gif/PontoEmDia.gif) 
 
 ## Capturas de Tela
 
