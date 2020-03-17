@@ -1,6 +1,9 @@
 # Ponto Em Dia
 
-Um Mockup produzido com base no Modular (Modularização dos componentes do app e Injeção de Dependências) + Mobx (Gerência de Estados), com propósito de estudo.
+Um Mockup produzido com 
+- Modular (Modularização dos componentes do app e Injeção de Dependências), 
+- Mobx (Gerência de Estados),
+- Avatar Profile (Via Url).
 
 ## GIF
 
